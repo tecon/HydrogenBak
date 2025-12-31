@@ -173,7 +173,7 @@ public class LuaActivity extends com.androlua.LuaActivity {
     //   Object ret = mOnBackPressed.call();
     //   if (ret != null && ret.getClass() == Boolean.class && (Boolean) ret) return;
     // }
-    // super.onBackPressed();
+    super.onBackPressed();
   }
 
   @Override

@@ -111,7 +111,7 @@ addCard("清理软件缓存")
 addTitle("页面设置")
 addCard("主题设置", true)
 addToggle("平行世界", "平行世界")
-addToggle("预见性返回手势", "预见性返回手势")
+-- addToggle("预见性返回手势", "预见性返回手势")
 
 addTitle("其他")
 addCard("关于", true)
