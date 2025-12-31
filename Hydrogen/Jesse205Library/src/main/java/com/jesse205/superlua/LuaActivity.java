@@ -160,7 +160,7 @@ public class LuaActivity extends com.androlua.LuaActivity {
   protected void onDestroy() {
     super.onDestroy();
     mOriginalContextRef = null; // 清理引用
-    getOnBackInvokedDispatcher().removeOnBackInvokedCallback(OnBackAnimationCallback);
+    
     // if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.UPSIDE_DOWN_CAKE
     //     && OnBackAnimationCallback != null) {
     //   getOnBackInvokedDispatcher().unregisterOnBackInvokedCallback(OnBackAnimationCallback);
