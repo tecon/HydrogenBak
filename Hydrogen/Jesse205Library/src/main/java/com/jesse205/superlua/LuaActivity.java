@@ -39,7 +39,7 @@ public class LuaActivity extends com.androlua.LuaActivity {
   public String luaDir;
   private LuaState L;
   private LuaObject mOnBackPressed;
-  private OnBackAnimationCallback OnBackAnimationCallback;
+  // private OnBackAnimationCallback OnBackAnimationCallback;
 
   private WeakReference<Context> mOriginalContextRef;
 
@@ -161,18 +161,18 @@ public class LuaActivity extends com.androlua.LuaActivity {
     super.onDestroy();
     mOriginalContextRef = null; // 清理引用
 
-    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.UPSIDE_DOWN_CAKE
-        && OnBackAnimationCallback != null) {
-      getOnBackInvokedDispatcher().unregisterOnBackInvokedCallback(OnBackAnimationCallback);
-    }
+    // if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.UPSIDE_DOWN_CAKE
+    //     && OnBackAnimationCallback != null) {
+    //   getOnBackInvokedDispatcher().unregisterOnBackInvokedCallback(OnBackAnimationCallback);
+    // }
   }
 
   @Override
   public void onBackPressed() {
-    if (mOnBackPressed != null) {
-      Object ret = mOnBackPressed.call();
-      if (ret != null && ret.getClass() == Boolean.class && (Boolean) ret) return;
-    }
+    // if (mOnBackPressed != null) {
+    //   Object ret = mOnBackPressed.call();
+    //   if (ret != null && ret.getClass() == Boolean.class && (Boolean) ret) return;
+    // }
     super.onBackPressed();
   }
 
