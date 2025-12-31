@@ -37,7 +37,7 @@ jobs:
       - name: Execute Gradle Command in Hydrogen Directory
         run: |
           if [ "${{ github.event.inputs.build_type }}" = "assembleRelease" ]; then
-            (cd Hydrogen && ./gradlew app:assembleRelease)
+            (cd Hydrogen && ./gradlew clean && ./gradlew app:assembleRelease)
           elif [ "${{ github.event.inputs.build_type }}" = "assembleRelease_unlua" ]; then
             (cd Hydrogen && ./gradlew app:assembleRelease_unlua)
           elif [ "${{ github.event.inputs.build_type }}" = "build_and_publish" ]; then
